@@ -1,0 +1,109 @@
+Name: Kaustubh Rai
+
+Location: San Jose, California, United States
+
+Education: Bachelor of Science in Computer Science, Duquesne University (Graduated December 2025)
+
+Career Goal: AI Engineer and Software Engineer — focused on building production AI systems, LLM-powered applications, full-stack software products, and intelligent automation.
+
+Current Focus Areas:
+- Cloud computing, AI/ML, and DevOps
+- LLM API integration and prompt engineering
+- Full-stack development with AI-native architectures
+- Infrastructure as code and CI/CD pipelines
+- Automation and intelligent tooling
+
+Technical Skills:
+- Languages: Python, TypeScript, JavaScript, C (for systems-level work), foundational Rust, foundational Swift
+- Frontend: React, Vite, Tailwind CSS, Next.js
+- Backend: Node.js, FastAPI, Express
+- Databases: PostgreSQL, SQLite, Supabase, Azure SQL, pgvector (for vector search/RAG)
+- DevOps & Infrastructure: Docker, GitHub Actions (CI/CD), AWS, OpenVPN, SSL/TLS
+- AI/ML & LLM Tooling: LLM API integration (OpenAI, Anthropic, Groq), prompt engineering, RAG architectures, dynamic question generation, AI-powered code generation
+- Security: Fuzz testing (libFuzzer, AFL++, AddressSanitizer), vulnerability discovery, network security
+- Tools: Claude Code (primary dev tool, plan mode), Cursor (frontend inline completion), GitHub Copilot (boilerplate), Git, XcodeBuildMCP
+
+Development Workflow: Generate-review-refine loop using AI coding agents. Uses Claude Code in plan mode as primary development tool, Cursor for frontend work, and GitHub Copilot for boilerplate generation.
+
+Hardware: MacBook Pro 14-inch M1 Pro
+
+Projects:
+
+1. TestPilot — AI-Powered Test Generation Tool
+   - Built from 0-to-1 as a solo developer
+   - Stack: Python, FastAPI, React, TypeScript, Docker, GitHub Actions
+   - Generates automated tests using LLM APIs
+   - Key learning: solving the "demo vs. reliable" problem — making LLM outputs consistent and production-grade, not just impressive in demos
+   - Lead portfolio project for job applications
+
+2. StackSmarts — AI-Powered Quiz Platform
+   - Dynamic question generation, study summaries, and a Learning Library
+   - Built with React, Vite, Tailwind, Supabase
+   - Originally scaffolded with Lovable, then iterated with AI coding agents
+   - Migrated auth from Google OAuth to Clerk
+   - Actively developing: progress tracking features and frontend redesign in progress
+   - Launched and publicly available
+
+3. NeuraFeed — Full-Stack Content Platform
+   - Production application built with React, TypeScript, Node.js, PostgreSQL
+   - Full-stack content aggregation and delivery platform
+
+4. PatientView.io — Healthcare Data Visualization
+   - Stack: React, Node.js, Azure SQL
+   - Visualizes healthcare data for clinical insights
+
+5. SecuScan — AI Security Scanner
+   - Terminal Noir design aesthetic
+   - SQLite vulnerability database, Rich CLI
+   - Uses Groq/Llama 3.3 70B for AI-powered analysis (switched from Gemini API due to rate limits)
+
+6. DocuMind — Legal Document Intelligence Platform
+   - Stack: Next.js, FastAPI, PostgreSQL, pgvector
+   - Celery for async document processing
+   - Comprehensive test coverage
+   - RAG-based document search and analysis
+
+7. Fuzz Testing & Vulnerability Discovery
+   - Built with C, libFuzzer, AFL++, AddressSanitizer
+   - Discovered real vulnerabilities: stack buffer overflow and uncontrolled recursion in a JSON parser
+   - Duquesne University COSC 460 Computer Security project
+
+8. OpenVPN Infrastructure
+   - Collaborative VPN implementation with multi-client chat
+   - AES-256-CBC encryption, Python, SSL/TLS
+   - Duquesne University COSC 450 Computer Networks project
+
+Interests and Exploration Areas:
+- Wearable health tech and healthtech applications
+- AI tooling and developer experience
+- Feedback aggregation platforms for indie makers (product research phase)
+- Supabase-native architectures
+- iOS/Swift development (newer interest, set up vibe coding workflow with Claude Code + XcodeBuildMCP + Xcode 16.4)
+- Rust + AI development (explored The Rust Book, Rustlings, Candle, Rig framework)
+- RAG pipelines and vector search architectures
+
+Courses and Certifications:
+- Anthropic Academy: "Claude Code in Action" (completed — learned hooks, custom slash commands, MCP configuration)
+- Exploring: Hugging Face MCP Course, Hugging Face LLM Course, IBM RAG and LangChain via Coursera
+
+Professional Context:
+- Recent CS graduate actively seeking entry-level / new grad software engineering and AI engineering roles
+- Targeting AI-native startups and product-focused companies
+- Experience spans AI startups, fintech, healthtech, infrastructure, and enterprise software domains
+- Systematic approach to job applications with ATS-optimized, tailored resumes per role
+- Strong communicator — writes authentic, specific outreach (no generic "passionate about technology" language)
+- Grounds professional narrative in concrete project moments, especially TestPilot's reliability challenges
+
+Personal Interests:
+- Programming and building side projects
+- Exploring different genres of music
+- Learning new skills and technologies
+- Working out and fitness
+- Ambidextrous — can play sports and perform many tasks with both hands
+
+Values and Working Style:
+- Honesty in self-representation — no fabricated skills or exaggerated claims on resumes
+- Uses honest qualifiers (e.g., "foundational") for technologies with limited exposure
+- Builds portfolio projects that go beyond tutorial-level work
+- Prefers authentic, human-sounding communication
+- Solo builder comfortable taking projects from idea to launch
