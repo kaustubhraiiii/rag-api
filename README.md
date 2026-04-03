@@ -1,44 +1,86 @@
-Personal Profile RAG API
+# Personal Profile RAG API
+
 A local RAG (Retrieval-Augmented Generation) application that stores personal profiles in a vector database and answers questions about them using a local LLM.
+
 Built with FastAPI, ChromaDB, and Ollama.
-How It Works
 
-Store — Profile text is split into chunks and embedded into ChromaDB using nomic-embed-text
-Retrieve — Queries are semantically matched against stored chunks
-Generate — Relevant chunks are passed as context to a local LLM (qwen2.5:0.5b) to produce answers
+## How It Works
 
-Tech Stack
+1. **Store** — Profile text is split into chunks and embedded into ChromaDB using `nomic-embed-text`
+2. **Retrieve** — Queries are semantically matched against stored chunks
+3. **Generate** — Relevant chunks are passed as context to a local LLM (`qwen2.5:0.5b`) to produce answers
 
-FastAPI — API framework
-ChromaDB — Vector database for embedding storage and similarity search
-Ollama — Local LLM and embedding model runtime
-Pydantic — Request validation
+## Tech Stack
 
-Setup
-Prerequisites
+- **FastAPI** — API framework
+- **ChromaDB** — Vector database for embedding storage and similarity search
+- **Ollama** — Local LLM and embedding model runtime
+- **Pydantic** — Request validation
 
-Python 3.10+
-Ollama installed and running
+## Setup
 
-Install
-bashpip install fastapi uvicorn chromadb ollama pydantic
+### Prerequisites
+
+- Python 3.10+
+- [Ollama](https://ollama.com) installed and running
+
+### Install
+
+```bash
+pip install fastapi uvicorn chromadb ollama pydantic
+```
+
 Pull the required Ollama models:
-bashollama pull nomic-embed-text
+
+```bash
+ollama pull nomic-embed-text
 ollama pull qwen2.5:0.5b
-Run
+```
+
+### Run
+
 Seed the knowledge base (optional):
-bashpython build_knowledge_base.py
+
+```bash
+python build_knowledge_base.py
+```
+
 Start the API:
-bashuvicorn main:app --reload
-Open http://localhost:8000/docs for the interactive Swagger UI.
-Endpoints
-MethodEndpointDescriptionPOST/documentsAdd a new user profilePUT/documentsReplace an existing user profileGET/usersList all stored users and chunk countsGET/searchSemantic search without LLM generationGET/askAsk a question with RAG-powered LLM answer
-Example Usage
-Add a profile:
-bashcurl -X POST http://localhost:8000/documents \
+
+```bash
+uvicorn main:app --reload
+```
+
+Open `http://localhost:8000/docs` for the interactive Swagger UI.
+
+## Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/documents` | Add a new user profile |
+| `PUT` | `/documents` | Replace an existing user profile |
+| `GET` | `/users` | List all stored users and chunk counts |
+| `GET` | `/search` | Semantic search without LLM generation |
+| `GET` | `/ask` | Ask a question with RAG-powered LLM answer |
+
+## Example Usage
+
+**Add a profile:**
+
+```bash
+curl -X POST http://localhost:8000/documents \
   -H "Content-Type: application/json" \
   -d '{"user_name": "jordan", "content": "My name is Jordan. I work as a data analyst.\n\nI specialize in Python, SQL, and Pandas."}'
-Ask a question:
-bashcurl "http://localhost:8000/ask?question=what+does+jordan+do&user=jordan"
-Semantic search:
-bashcurl "http://localhost:8000/search?query=python+skills&n_results=3"
+```
+
+**Ask a question:**
+
+```bash
+curl "http://localhost:8000/ask?question=what+does+jordan+do&user=jordan"
+```
+
+**Semantic search:**
+
+```bash
+curl "http://localhost:8000/search?query=python+skills&n_results=3"
+```
